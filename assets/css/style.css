@@ -1,0 +1,281 @@
+@font-face {
+  font-family: "HarryPotter";
+  src: url(../font/HARRYP__.TTF);
+}
+
+body {
+  background-image: url(../img/fond_etoile.jpg);
+}
+
+.video_background {
+  position: absolute;
+  width: 98.5%;
+  top: 10%;
+  z-index: -1;
+}
+
+.video_background video {
+  width: 100%;
+}
+
+.titre {
+  color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 1vw;
+  min-height: 20vw;
+}
+
+.titre h1 {
+  background-color: rgba(102, 102, 102, 0.5);
+  padding: 1vw;
+  border-radius: 1vw 0;
+}
+
+/* CSS pour le swiper*/
+.swiper {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  align-items: center;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  border-radius: 1vw;
+  border: 0.2vw solid #b89e14;
+}
+
+.swiper h1 {
+  font-family: "HarryPotter", Arial;
+  letter-spacing: 0.5rem;
+}
+
+swiper-container {
+  height: 30vw;
+  width: 100%;
+  background-color: black;
+  border-radius: 1vw;
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+swiper-slide img {
+  display: block;
+  width: 20vw;
+  height: 90%;
+  object-fit: fill;
+  margin-top: 0.5vw;
+}
+
+/* CSS pour les tabs*/
+.cards-container h1 {
+  font-family: "HarryPotter", Arial;
+  color: white;
+}
+
+.filters ul {
+  color: white;
+  display: flex;
+}
+
+.filters li {
+  cursor: pointer;
+  list-style-type: none;
+  margin-right: 3vw;
+}
+
+.filters-contain {
+  max-height: fit-content;
+  max-width: fit-content;
+  background-color: black;
+  border-radius: 1vw;
+  border: 0.2vw solid #b89e14;
+}
+
+.ecole-elements {
+  display: flex;
+  color: white;
+  background-color: black;
+  max-width: 93%;
+  border-radius: 1vw;
+  border: 0.2vw solid #b89e14;
+  height: fit-content;
+}
+
+#card-filtr-item {
+  min-width: 15vw;
+  min-height: 20vw;
+  max-width: 15vw;
+  max-height: 20vw;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-header img {
+  width: 15vw;
+  height: 15vw;
+}
+
+/* CSS pour le DarkMode*/
+.light-mode {
+  color: white;
+}
+
+.light-mode .swiper {
+  color: black;
+  background-color: white;
+  border: 0.2vw solid #ffd700;
+}
+
+.light-mode swiper-container {
+  background-color: white;
+}
+
+.light-mode .filters-contain {
+  color: black;
+  background-color: white;
+  border: 0.2vw solid #ffd700;
+}
+
+.light-mode .ecole-elements {
+  color: black;
+  background-color: white;
+  border: 0.2vw solid #ffd700;
+}
+
+.light-mode #carte-container {
+  color: black;
+  background-color: white;
+}
+
+/* CSS pour retourner en haut*/
+.aller-haut {
+  z-index: 1;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.aller-haut img {
+  max-width: 5vw;
+  max-height: 5vw;
+}
+
+.aller-haut:hover {
+  transition: linear;
+  transform: scale(1.2);
+}
+
+/* CSS pour les collections*/
+#carte-container {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  gap: 20px;
+}
+
+#carte-template {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 20px;
+  width: calc(100% - 40px); /* Full width by default */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  margin-bottom: 20px; /* Add some space between cards */
+  min-width: 25vw;
+  width: 25vw;
+  height: fit-content;
+}
+
+#carte-template img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  margin-bottom: 1vw;
+}
+
+#carte-template:hover {
+  transform: translateY(-5px);
+}
+
+.carte-nom {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.carte-maison {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.carte-details-link {
+  display: inline-block;
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.carte-details-link:hover {
+  background-color: #0056b3;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.pagination button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+}
+
+.pagination #current-page {
+  font-size: 16px;
+}
+
+@media all and (max-device-width: 1020px) {
+  .filters ul {
+    padding-inline-start: 4vw;
+  }
+
+  .ecole-elements {
+    max-width: 76%;
+  }
+}
